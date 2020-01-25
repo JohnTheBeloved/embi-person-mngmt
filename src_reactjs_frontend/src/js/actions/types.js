@@ -10,4 +10,4 @@ export {
   UPDATED_PERSON,
   DELETED_PERSON,
   ERROR_OCCURED,
-}
+};

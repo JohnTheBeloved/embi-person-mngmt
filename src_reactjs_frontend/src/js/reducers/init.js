@@ -1,5 +1,5 @@
 export default {
-  person: {list: []},
+  person: { list: [] },
   loadingStatus: { apiFetching: [] },
   error: {
     message: '',

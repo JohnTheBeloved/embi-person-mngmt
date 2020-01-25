@@ -9,7 +9,7 @@ const rootReducer = combineReducers({
   toastr: toastrReducer,
   // Models
   person,
-  
+
   // Utils
   loadingStatus,
   paginateParams,

@@ -1,7 +1,7 @@
 
 package com.embi.core.model;
 
-import java.util.Set;
+import java.util.List;
 
 import javax.persistence.CollectionTable;
 import javax.persistence.Column;
@@ -28,14 +28,13 @@ public class Person {
   @ElementCollection
   @CollectionTable(name="hobby", joinColumns=@JoinColumn(name = "hobby_id"))
   @Column(name="hobby")
-  private Set<String> hobby;
+  private List<String> hobby;
 
   public Person() {
 
   }
 
-  public Person(Long id, String firstName, String lastName, Integer age, String favouriteColour, Set<String> hobby) {
-    this.id = id;
+  public Person(String firstName, String lastName, Integer age, String favouriteColour, List<String> hobby) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.age = age;
@@ -88,11 +87,11 @@ public class Person {
     this.favouriteColour = favouriteColour;
   }
 
-  public Set<String> getHobby() {
+  public List<String> getHobby() {
     return hobby;
   }
 
-  public void setHobby(Set<String> hobby) {
+  public void setHobby(List<String> hobby) {
     this.hobby = hobby;
   }
 

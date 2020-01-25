@@ -3,7 +3,6 @@ import store from '../store/configureStore';
 const { dispatch } = store;
 const common = '/persons/';
 class PersonApi {
-
   static create(person) {
     const url = `${common}`;
     dispatch({ type: 'POST_PERSON_REQUEST', url });
@@ -23,12 +22,12 @@ class PersonApi {
     const url = `${common}`;
     dispatch({ type: 'GET_PERSONS_REQUEST', url });
     return fetch(url)
-      .then((response) => response.json())
+      .then(response => response.json())
       .catch((error) => { dispatch({ type: 'GET_PERSONS_FAILURE', url }); return error; });
   }
 
   static update(person) {
-    const url = `${common}person/${person._id}`;
+    const url = `${common}${person.id}`;
     dispatch({ type: 'PUT_PERSON_REQUEST', url });
     const request = {
       method: 'PUT',

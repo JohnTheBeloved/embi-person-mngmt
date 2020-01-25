@@ -1,4 +1,4 @@
-# embi-person-test
+# embi-person-management
 
 
 ## About this Project
@@ -8,7 +8,7 @@ This project is a simple application written as a test assesement of technical a
 For more information please contact John by mailing [topzy20@yahoo.com](topzy20@yahoo.com)
 
 ## Problem Solved
-The project was written as a solution to the question [requirements](https://github.com/nordsoftware/docs/blob/master/recruitment/html5/README.md). The technologies used were selected by me since no specific technology stack was specified in the question as it was specified as subjective.
+The project was written as a solution to the hacker rank interview question. The technologies used were selected by me since no specific technology stack was specified in the question as it was specified as subjective.
 
 ## Technologies used
 * Back end Technology : Java  (Springboot, Hibernate, h2 memory database)
@@ -16,8 +16,8 @@ The project was written as a solution to the question [requirements](https://git
 * the source can be found in *reactjs_frontend* folder
 
 ### System Requirements
-  Java 8 or higher
-  Node 8 or higher
+  * Java 8 or higher,
+  * Node 8 or higher
 
 ### Building the Frontend Application
   * Clone this repository: git clone https://github.com/JohnTheBeloved/embi-person-mngmt.git 
@@ -32,6 +32,9 @@ The project was written as a solution to the question [requirements](https://git
 ### Running the App
   * Move the built jar to a location of your choice
   * Execute the executable jar file:  `java -jar embi-core-0.0.1-SNAPSHOT.jar`
+
+### Running the Ap
+  * `mvn test`
 
 ### Accessing the app
   * The application is now running on http://localhost:8080

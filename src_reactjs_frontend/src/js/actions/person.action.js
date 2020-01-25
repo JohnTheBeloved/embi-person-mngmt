@@ -2,7 +2,7 @@ import { toastr } from 'react-redux-toastr';
 import api from '../api/person.api';
 import {
   CREATED_PERSON, LOADED_PERSONS, UPDATED_PERSON,
-  DELETED_PERSON
+  DELETED_PERSON,
 } from './types';
 import * as error from './error';
 
@@ -25,7 +25,7 @@ const loadPersons = () => dispatch => api.getAll()
   });
 
 const createSuccess = (person) => {
-  toastr.success('Success', `Person created successfully`);
+  toastr.success('Success', 'Person created successfully');
   return { type: CREATED_PERSON, person };
 };
 
@@ -41,12 +41,12 @@ const create = person => dispatch => api.create(person).then((data) => {
 });
 
 const updateSuccess = (person) => {
-  toastr.success('Success', 'UOM  Category Updated Successfully');
+  toastr.success('Success', 'Person Updated Successfully');
   return { type: UPDATED_PERSON, person };
 };
 
 const update = person => dispatch => api.update(person).then((data) => {
-  if (data.id) {
+  if (data.id === person.id) {
     dispatch(updateSuccess(data));
     dispatch(loadPersons());
   } else {
@@ -74,5 +74,5 @@ const remove = personId => dispatch => api.remove(personId).then((data) => {
 
 
 export {
-  create, createSuccess, loadPersons, loadSuccess, update, updateSuccess, remove, removeSuccess
+  create, createSuccess, loadPersons, loadSuccess, update, updateSuccess, remove, removeSuccess,
 };
